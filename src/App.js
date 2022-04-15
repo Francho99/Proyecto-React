@@ -8,11 +8,14 @@ import NotFoundPage from './Components/NotFoundPage';
 function App() {
   return (
     <BrowserRouter>
+    <Navbar/>
       <Routes>
-        <Route path='/' element={<><Navbar/><ItemListContainer/></>}>
-          <Route path='category/:categoryId' element={ItemListContainer}/>
+        <Route path='/' element={<><ItemListContainer/></>}>
+        
+        <Route path='/category/:categoryId' element={ItemListContainer}/>
+        <Route path='/item/:id' element={ItemDetailContainer}/>  
+      
         </Route>
-        <Route path='/item/:id' element={ItemDetailContainer}/>
        </Routes>
     </BrowserRouter>
   );

@@ -7,10 +7,11 @@ import Typography from '@mui/material/Typography';
 import ItemCount from './ItemCount';
 import s from './Item.module.css'
 import Button from '@mui/material/Button'
+import { Outlet, Link } from 'react-router-dom';
 
 
 
-export default function Item({id, nombre, precio, imagen}) {
+export default function Item({id, nombre, precio, imagen, stock}) {
   return (
     <div className={s.ItemCard} key={id}>
         <Card sx={{ maxWidth: 345 }}>
@@ -29,11 +30,11 @@ export default function Item({id, nombre, precio, imagen}) {
             </Typography>
         </CardContent>
         <CardActions>
-            <ItemCount stock={10}></ItemCount>
-            
+            <ItemCount stock={stock}></ItemCount>
         </CardActions>
-        <Button variant="contained" className={s.Button}>Ver detalle</Button>
+        <Button as={Link} to={`/item/${id}`} variant="outlined" size='large'>Ver detalle</Button>
         </Card>
+        <Outlet></Outlet>
     </div>
   );
 }

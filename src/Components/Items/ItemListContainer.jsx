@@ -15,7 +15,7 @@ export default function ItemListContainer(){
 
     useEffect(() => {
         setLoading(true);
-        promesas(3000, products, categoryId)
+        promesas(2000, products, categoryId)
         .then(resultado => setProductos(resultado))
         .catch(error => console.log(error))
         .finally(()=>{setLoading(false)})

@@ -9,6 +9,8 @@ export default function ItemList({productos}) {
         nombre={p.nombre}
         precio={p.precio}
         imagen={p.imagen}
+        id={p.id}
+        stock={p.stock}
         />
         
     ))
