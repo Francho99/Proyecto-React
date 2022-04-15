@@ -1,4 +1,4 @@
-let isOk = true;
+import products from "./products"
 
 const product = {
     id: 1,
@@ -8,13 +8,15 @@ const product = {
     descripcion: "Lo que tienes que saber de este producto: Incluye control. Resolución de 3840px x 2160px. Memoria RAM de 16GB. Horas de diversión garantizada. Cuenta con: 1 soporte vertical, 1 cable de alimentación ac, 1 cable usb, 1 cable hdmi, 1 guía de inicio rápido, 1 guía de seguridad."
 }
 
-const promesas = (time, task) => {
+const promesas = (time, task, categoria) => {
     return new Promise((resolve, reject) => {
+        const productosFiltrados = products.filter((producto)=> producto.category === categoria)
         setTimeout(() => {
-            if(isOk) {
+            if(categoria){
+                resolve(productosFiltrados)
+            }
+            else {
                 resolve(task);
-            } else {
-                reject('Error');
             }}, time)})}
 
 

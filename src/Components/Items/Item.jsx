@@ -6,6 +6,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import ItemCount from './ItemCount';
 import s from './Item.module.css'
+import Button from '@mui/material/Button'
+
+
+
 export default function Item({id, nombre, precio, imagen}) {
   return (
     <div className={s.ItemCard} key={id}>
@@ -26,7 +30,9 @@ export default function Item({id, nombre, precio, imagen}) {
         </CardContent>
         <CardActions>
             <ItemCount stock={10}></ItemCount>
+            
         </CardActions>
+        <Button variant="contained" className={s.Button}>Ver detalle</Button>
         </Card>
     </div>
   );

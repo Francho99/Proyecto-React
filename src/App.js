@@ -9,14 +9,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Navbar/>}>
-          <Route path='consolas' element/>
-          <Route path='juegos' element/>
-          <Route path='accesorios' element/>
+        <Route path='/' element={<><Navbar/><ItemListContainer/></>}>
+          <Route path='category/:categoryId' element={ItemListContainer}/>
         </Route>
+        <Route path='/item/:id' element={ItemDetailContainer}/>
        </Routes>
-      <ItemListContainer/>
-      <ItemDetailContainer/>
     </BrowserRouter>
   );
 }

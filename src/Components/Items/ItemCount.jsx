@@ -15,7 +15,7 @@ export default function ItemCount({stock}) {
         setCount(count - 1);}
     }
     function onAdd () {
-        alert("Metete " + count)
+        alert("Agregaste " + count + " unidades al carrito")
     }
   return (
     <div className={s.div}>
