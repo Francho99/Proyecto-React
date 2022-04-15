@@ -1,0 +1,12 @@
+.div{
+    max-width: 250px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.botononAdd{
+    display: flex;
+    flex-direction: column;
+    max-height: 70px;
+    width: 150px;
+}

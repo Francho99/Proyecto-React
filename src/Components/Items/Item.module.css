@@ -1,0 +1,19 @@
+.divList{
+    padding-top: 50px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+}
+.ItemCard{
+    width: 300px;
+    margin: 10px;
+}
+.NotFound{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 100px;
+
+}

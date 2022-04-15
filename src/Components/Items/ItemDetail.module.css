@@ -1,0 +1,10 @@
+.div1{
+    display: flex;
+    justify-content: left;
+    max-width: 1000px;
+    margin: auto;
+}
+.img{
+    width: 700px;
+    height: auto;
+}
