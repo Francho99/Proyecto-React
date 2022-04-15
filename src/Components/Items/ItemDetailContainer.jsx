@@ -4,16 +4,17 @@ import { traerProducto } from '../../utils/promesas';
 import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer = () => {
-
-    const [producto, setProducto] = useState({})
-
+    
     const { id } = useParams();
+    const [producto, setProducto] = useState({})
+    
 
     useEffect(() =>{
         traerProducto(id)
             .then((res)=>{setProducto(res)})
+            .catch(console.log('Error'))
     }, [id])
-    
+    console.log(producto)
     return (
         <ItemDetail producto={producto}/>
     )

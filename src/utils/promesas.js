@@ -13,13 +13,23 @@ const promesas = (time, task, categoria) => {
             }}, time)})}
 
 
-export const traerProducto = (id) => {
+//export const traerProducto = (id) => {
+//    return new Promise((resolve, reject) => {
+//        const productoElegido = products.find((producto) => producto.id === Number(id))
+//        setTimeout(() => {
+//            resolve(productoElegido);})
+//            reject('Error')
+//    }, 2000)
+//}
+
+export function traerProducto(id) {
     return new Promise((resolve, reject) => {
-        const productoElegido = products.find((producto) => producto.id === Number(id))
+        const productoElegido = products.find((product) => product.id === parseInt(id))
         setTimeout(() => {
-            resolve(productoElegido);})
-            reject('Error')
-    }, 2000)
+            resolve(productoElegido)
+            reject(console.log('Error traerProducto'))
+        }, 2000)
+    })
 }
 
 export default promesas;
