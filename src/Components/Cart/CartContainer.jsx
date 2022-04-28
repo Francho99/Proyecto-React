@@ -1,11 +1,11 @@
 import React from "react";
+import Cart from "./Cart";
 
 
 export default function CartContainer() {
     return( 
         <>
-        <h1>Aca va a haber un Cart, en un futuro cercano!</h1>
-        <h3>Un saludo Ernesto</h3>
+        <Cart></Cart>
         </>
     )
 }

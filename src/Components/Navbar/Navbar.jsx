@@ -18,7 +18,7 @@ export default function Navbar() {
               <Button as={Link} to={'/category/consolas'} color="inherit" sx={{ flexGrow: 0.02 }}>Consolas</Button>
               <Button as={Link} to={'/category/juegos'} color="inherit" sx={{ flexGrow: 0.02 }}>Juegos</Button>
               <Button as={Link} to={'/category/accesorios'} color="inherit" sx={{ flexGrow: 0.02 }}>Accesorios</Button>
-              <CartWidget as={Link} to={'/cart'}></CartWidget>
+              <Link to={'/cart'}><CartWidget/></Link>
           </Toolbar> 
         </AppBar>
       </Box>

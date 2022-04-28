@@ -6,7 +6,7 @@ import CartButton from '../Cart/CartButton'
 
 
 const ItemDetail = ({producto}) => {
-    
+
     const [number, setNumber] = useState(0)
 
 
@@ -19,13 +19,13 @@ const ItemDetail = ({producto}) => {
             <div>
                 <h1>{producto.nombre}</h1>
                 <h2>{producto.precio}</h2>
+                <ItemCount stock={producto.stock}></ItemCount>
                 {
                     number === 0 ? <ItemCount stock={producto.stock} addToCart={addToCart}></ItemCount> : <CartButton/>
                 }
                 <p>{producto.descripcion}</p>
             </div>
-        </div>
-    )
+        </div>)
 }
 
 export default ItemDetail;
